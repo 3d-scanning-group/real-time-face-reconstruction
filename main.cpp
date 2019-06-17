@@ -1,6 +1,9 @@
 #include <iostream>
 
 #include <opencv2/opencv.hpp>
+#include "preprocess.h"
+#include "pose_estimator.h"
+#include "flip_flop_optimizer.h"
 
 using namespace cv;
 
@@ -20,6 +23,13 @@ int main(int argc, char** argv )
         printf("No image data \n");
         return -1;
     }
+
+    preprocess(image);
+
+    estimatePose(image);
+
+    optimize(image);
+
     namedWindow("Display Image", WINDOW_AUTOSIZE );
     imshow("Display Image", image);
 
