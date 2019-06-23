@@ -8,7 +8,10 @@
 
 #include <opencv2/opencv.hpp>
 
-void estimatePose(cv::Mat img);
+// TODO: 
+// 1. Implement Procrutes Algorithms, including defining key points on basel model
+// 2. ICP with SVD(?) or optimization
+void estimatePose(cv::Mat DepthMap, cv::Mat NormalMap, char* ModelPath);
 
 
 

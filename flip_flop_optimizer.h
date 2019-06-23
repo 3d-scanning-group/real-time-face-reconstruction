@@ -7,6 +7,11 @@
 
 #include <opencv2/opencv.hpp>
 
+// TODO: Data Fusion
+// 1. Compute displacement map using raymarching
+// 2. Fair displace map by computing best fitting thin plate
+void DataFusion();
+
 void optimize(cv::Mat img);
 
 
